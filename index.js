@@ -3,9 +3,9 @@ exports.chunks = function (arr, n) {
 
   if (!arr || !n) return arr
 
-  var length = arr.length
-  var slicePoint = 0
-  var ret = []
+  const length = arr.length
+  let slicePoint = 0
+  let ret = []
 
   while (slicePoint < length) {
     ret.push(arr.slice(slicePoint, slicePoint+n))
