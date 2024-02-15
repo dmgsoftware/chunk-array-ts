@@ -1,42 +1,36 @@
-# Chunks Array
+# Chunks Array TS
 
-[![NPM version][npm-image]][npm-url]
-[![build status][travis-image]][travis-url]
-[![Test coverage][coveralls-image]][coveralls-url]
+A tiny module that turns your array into chunks of n-size, in TypeScript!
 
-[npm-image]: https://img.shields.io/npm/v/chunk-array.svg?style=flat
-[npm-url]: https://npmjs.org/package/chunk-array
-[travis-image]: https://img.shields.io/travis/haio/chunk-array.svg?style=flat
-[travis-url]: https://travis-ci.org/haio/chunk-array
-[coveralls-image]: https://img.shields.io/coveralls/haio/chunk-array.svg?style=flat
-[coveralls-url]: https://coveralls.io/r/haio/chunk-array?branch=master
+[//]: # (## Usage)
 
-A tiny module that turn your array into chunks of n-size.
+[//]: # ()
+[//]: # (```sh)
 
-## Usage
+[//]: # (npm install chunk-array --save)
 
-```sh
-npm install chunk-array --save
-```
+[//]: # (```)
 
 ### chunks(arr, n)
 
-Turn array into chunks of size n, if n is a falsy value then return original array
+Turn array into chunks of size n. If n is 0 or less, then the original array is returned.
 
-```js
-var chunks = require('chunk-array').chunks
-var arr = [1,2,3,4,5,6]
-var results = chunks(arr, 3) //[[1,2,3], [4,5,6]]
+```ts
+import chunks from 'chunks-array-ts'
+
+const arr = [1,2,3,4,5,6]
+const results = chunks(arr, 3) //[[1,2,3], [4,5,6]]
 ```
 
 ### pairs(arr)
 
-A convenient method that turn array into pairs, which equals `chunks(arr, 2)`
+A convenient method that turn an array into pair chunks, which is equivalent to `chunks(arr, 2)`.
 
-```js
-var pairs = require('chunk-array').pairs
-var arr = [1,2,3,4,5,6]
-var results = pairs(arr) //[[1,2], [3,4], [5,6]]
+```ts
+import pairs from 'chunks-array-ts'
+
+const arr = [1,2,3,4,5,6]
+const results = pairs(arr) //[[1,2], [3,4], [5,6]]
 ```
 
 ### LICENSE
