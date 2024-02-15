@@ -1,6 +1,6 @@
 {
   "name": "chunk-array-ts",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Turn an array into chunks of n-size",
   "main": "src/index.ts",
   "scripts": {
