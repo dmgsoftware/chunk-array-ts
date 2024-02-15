@@ -1,5 +1,5 @@
 import {describe, it} from '@jest/globals';
-import { chunks, pairs } from './index'
+import { chunks, pairs } from '../src'
 import * as assert from 'assert'
 
 describe('Chunk Array', function () {
